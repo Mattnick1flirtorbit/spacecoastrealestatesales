@@ -276,3 +276,5 @@ section.band {
   .cta-band { padding: 28px 22px; }
   section.band { padding: 26px 20px 14px; }
 }
+
+.equal-housing { display: block; width: 100%; text-align: center; margin-top: 6px; font-size: 0.82em; opacity: 0.75; letter-spacing: 0.04em; }
