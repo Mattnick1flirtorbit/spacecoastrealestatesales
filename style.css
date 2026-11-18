@@ -1,0 +1,325 @@
+/* SpaceCoast Real Estate Sales — microsite styles
+   Coastal Florida realty palette: deep navy, coastal teal, warm sand.
+   Serif display headlines (Georgia), system sans body.
+   Shared design spec across the MaxxCity Realty microsites.
+   No external assets. */
+
+:root {
+  --navy: #0F2A43;
+  --navy-2: #17395a;
+  --teal: #17877B;
+  --teal-dark: #11665c;
+  --sand: #F4EDE3;
+  --ink: #22303C;
+  --muted: #4d5d6b;
+  --muted-light: #8496a5;
+  --bg: #ffffff;
+  --card: #ffffff;
+  --line: #dde3e8;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+h1, h2, .wordmark, .price {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+a { color: var(--teal-dark); }
+a:hover { color: var(--teal); }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--navy);
+  color: #fff;
+}
+.header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.wordmark {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+.wordmark span { color: #57c4b8; }
+.main-nav a {
+  color: #cfe0d8;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 0.98rem;
+}
+.main-nav a:hover { color: #fff; }
+.main-nav a.nav-cta {
+  background: var(--teal);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.main-nav a.nav-cta:hover { background: var(--teal-dark); }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 70%, #1d4e4a 100%);
+  color: #fff;
+  padding: 64px 24px 72px;
+}
+.hero-inner { max-width: 820px; margin: 0 auto; }
+.hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #8fd8cf;
+  margin: 0 0 14px;
+}
+.hero h1 {
+  font-size: 2.45rem;
+  line-height: 1.18;
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+.hero p.lede {
+  font-size: 1.16rem;
+  color: #dde8e4;
+  margin: 0 0 28px;
+  max-width: 680px;
+}
+.btn {
+  display: inline-block;
+  background: var(--teal);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 7px;
+  margin-right: 12px;
+}
+.btn:hover { background: var(--teal-dark); color: #fff; }
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #7d97b5;
+  color: #e6eef7;
+}
+.btn.ghost:hover { border-color: #fff; color: #fff; }
+.btn.ghost-dark {
+  background: transparent;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+}
+.btn.ghost-dark:hover { background: var(--navy); color: #fff; }
+
+/* ---------- Layout ---------- */
+main { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+section { padding: 44px 0 8px; }
+section h2 {
+  font-size: 1.65rem;
+  line-height: 1.25;
+  color: var(--navy);
+  margin: 0 0 14px;
+}
+section h3 { color: var(--navy-2); margin: 0 0 8px; font-size: 1.12rem; }
+section p { max-width: 780px; margin: 0 0 16px; }
+.narrow { max-width: 780px; }
+
+/* ---------- Sand band ---------- */
+section.band {
+  background: var(--sand);
+  border-radius: var(--radius);
+  padding: 34px 30px 22px;
+  margin-top: 44px;
+}
+
+/* ---------- Card grids ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin: 22px 0 10px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+}
+.card .step {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  background: #e2f2f0;
+  border-radius: 20px;
+  padding: 3px 11px;
+  margin-bottom: 10px;
+}
+.card .price {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 10px;
+}
+.card p { margin: 0 0 10px; font-size: 0.98rem; color: var(--muted); }
+.card p:last-child { margin-bottom: 0; }
+.card h3 { margin-bottom: 6px; }
+.card a { font-weight: 600; text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+
+/* ---------- Deep-dive stage list (selling process) ---------- */
+.stage-list { max-width: 820px; }
+.stage-block {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 16px;
+}
+.stage-block .step {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  background: #e2f2f0;
+  border-radius: 20px;
+  padding: 3px 11px;
+  margin-bottom: 10px;
+}
+.stage-block p { margin: 0 0 10px; }
+.stage-block p:last-child { margin-bottom: 0; }
+
+/* ---------- FAQ ---------- */
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  max-width: 820px;
+}
+.faq-item h3 { margin-bottom: 6px; }
+.faq-item p { margin: 0; color: var(--muted); }
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: var(--navy);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 38px 34px;
+  margin: 48px 0;
+  text-align: left;
+}
+.cta-band h2 { color: #fff; margin-bottom: 10px; font-family: Georgia, "Times New Roman", Times, serif; }
+.cta-band p { color: #cdd8de; margin-bottom: 22px; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--navy);
+  margin-top: 24px;
+  padding: 28px 24px 40px;
+  color: #a9bcc9;
+  font-size: 0.92rem;
+}
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  justify-content: space-between;
+}
+.site-footer a { color: #d5e0e8; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* ---------- Breadcrumb (subpage) ---------- */
+.crumb { padding: 22px 0 0; font-size: 0.92rem; color: var(--muted-light); }
+.crumb a { text-decoration: none; }
+.crumb a:hover { text-decoration: underline; }
+.page-head { padding-top: 18px; }
+.page-head h1 { font-size: 2.05rem; color: var(--navy); line-height: 1.22; margin: 0 0 12px; }
+.page-head p.lede { font-size: 1.1rem; color: var(--muted); max-width: 760px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .hero { padding: 44px 20px 52px; }
+  .hero h1 { font-size: 1.85rem; }
+  .page-head h1 { font-size: 1.6rem; }
+  section h2 { font-size: 1.4rem; }
+  .main-nav a { margin-left: 14px; }
+  .btn { display: block; text-align: center; margin: 0 0 10px; }
+  .cta-band { padding: 28px 22px; }
+  section.band { padding: 26px 20px 14px; }
+}
+
+.equal-housing { display: block; width: 100%; text-align: center; margin-top: 6px; font-size: 0.82em; opacity: 0.75; letter-spacing: 0.04em; }
+
+/* ===== MaxxCity brand bar + bold hero (bhc-) — 2026-11-17 rollout, MaxxListing v2 pattern ===== */
+.bhc-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.bhc-logoplate{background:#fff;border-radius:12px;padding:6px 12px;display:flex;align-items:center;box-shadow:0 6px 18px rgba(0,30,60,.25)}
+.bhc-logoplate img{height:48px;width:auto;display:block}
+.bhc-brokerage{display:flex;flex-direction:column;line-height:1.25}
+.bhc-bname{color:#fff;font-weight:800;font-size:19px}
+.bhc-blic{color:#bcd7ee;font-size:12.5px}
+.main-nav a.bhc-phone{font-weight:700;font-size:15px;color:#004e82;text-decoration:none;background:#fff;padding:8px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 6px 16px rgba(0,30,60,.25)}
+.bhc{position:relative;background:#f6fafd;color:#0d2b45;overflow:clip;padding:58px 56px 64px}
+.bhc::after{content:"";position:absolute;background:#006bba;width:620px;height:620px;right:-150px;top:-190px;transform:rotate(8deg);z-index:0}
+.bhc-wrap{position:relative;z-index:2;max-width:1360px;margin:0 auto}
+.bhc-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:44px;align-items:start}
+.bhc-h1{font-weight:800;line-height:.99;letter-spacing:-1px;margin:0;overflow-wrap:break-word;text-wrap:balance;color:#0d2b45}
+.bhc-a{color:#006bba}
+.bhc-lede{margin-top:28px;font-size:20px;line-height:1.55;color:#47617a;max-width:540px}
+.bhc-actions{margin-top:34px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.bhc-btn{display:inline-block;background:#004e82;color:#f6fafd;font-weight:700;font-size:17px;text-decoration:none;padding:17px 30px;border-radius:999px;transition:transform .18s ease}
+.bhc-btn:hover{transform:translateY(-2px);color:#f6fafd}
+.bhc-link2{color:#0d2b45;font-weight:600;font-size:16px;text-decoration:none;border-bottom:2px solid #006bba;padding-bottom:3px}
+.bhc-fine{margin-top:38px;font-size:13.5px;color:#47617a;line-height:1.6;max-width:520px}
+.bhc-stack{position:relative}
+.bhc-block{border-radius:20px;padding:26px 28px;position:relative}
+.bhc-deep{background:#006bba;color:#eef7ff;box-shadow:0 24px 50px rgba(0,80,140,.28);z-index:3}
+.bhc-sky{background:linear-gradient(135deg,#7cc7ec,#35a6dc);color:#0d2b45;margin:-14px -8px 0 36px;z-index:2;padding:38px 26px 20px}
+.bhc-n{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;opacity:.85}
+.bhc-bt{font-size:25px;font-weight:800;margin-top:3px;line-height:1.2}
+.bhc-bd{font-size:15px;line-height:1.5;margin-top:5px}
+.bhc-deep .bhc-bd{color:#dcefff}
+.bhc-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.bhc-card{background:#fff;border:1px solid #d7e5ef;border-radius:14px;padding:16px 18px}
+.bhc-card .bhc-bt{font-size:20px}
+.bhc-card .bhc-bd{font-size:13.5px;color:#47617a}
+.bhc-wide{margin-top:14px}
+.bhc-wide .bhc-bd{font-size:14.5px;color:#47617a;line-height:1.6}
+@media (max-width:900px){
+  .bhc{padding:44px 24px 54px}
+  .bhc-grid{grid-template-columns:1fr}
+  .bhc-h1{font-size:46px !important}
+  .bhc-sky{margin-left:0;margin-right:0}
+  .bhc-brokerage{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  .bhc-btn{transition:none}
+  .bhc-btn:hover{transform:none}
+}
